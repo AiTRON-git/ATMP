@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling links to look like buttons */
+.flow-button {
+    display: inline-block;
+    padding: 15px;
+    background-color: #333; /* Dark background for button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.flow-button:hover {
+    background-color: #ff4c4c; /* Red hover effect */
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(255, 76, 76, 0.3);
+}
+
+.flow-button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 4px 10px rgba(255, 76, 76, 0.2);
+}
+
+/* Arrow between buttons */
+.flow-button::after {
+    content: '↓'; /* Arrow symbol */
+    position: absolute;
+    bottom: -20px; /* Position the arrow below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #333; /* Arrow in dark color */
+}
+
+/* Remove arrow from last element */
+.flow-button:last-child::after {
+    display: none;
+}
